@@ -1,9 +1,19 @@
+
+'use client';
+
 // import Image from "next/image";
 import React from 'react';
+import {useRouter} from 'next/navigation';
 import Button from '@/components/button';
-import handleContactClick from '@/components/handleContactClick';
+
 
 const HomePage = () => {
+  const router = useRouter();
+
+  const handleContactClick = () => {
+    router.push('/contact'); // Navigate to the contact page
+  };
+
   return (
     <main className="bg-gray-100 text-gray-800 min-h-screen">
       {/* Hero Section */}
