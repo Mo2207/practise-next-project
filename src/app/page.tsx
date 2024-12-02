@@ -3,7 +3,7 @@
 
 // import Image from "next/image";
 import React from 'react';
-import HeroSection from '@/components/HeroSection';
+import HeroSection from '@/components/heroSection';
 import ServicesSection from '@/components/servicesSection';
 
 
