@@ -40,6 +40,9 @@ const ContactForm: React.FC = () => {
   ) => {
     // prevent full page reload
     event.preventDefault();
+    // save submitted form data for processing
+    setSubmittedData(formData);
+    console.log(submittedData);
     // clear form fields
     setFormData({ name: "", email: "", message: "" });
   }
