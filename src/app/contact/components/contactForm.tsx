@@ -42,30 +42,32 @@ const ContactForm: React.FC = () => {
     event.preventDefault();
     // save submitted form data for processing
     setSubmittedData(formData);
-    console.log(submittedData);
+    // console.log(formData);
+
     // clear form fields
     setFormData({ name: "", email: "", message: "" });
   }
 
   return (
-    <form className="py-10 place-content-center" action="">
-      <div className='grid grid-cols-1 gap-4 content-center mx-10'>
-        <label htmlFor="">Name:
-          <input className='bg-gray-600' name="name" value={formData.name}
+    <form className="py-6 px-6 max-w-lg mx-auto bg-gray-800 rounded-lg shadow-md mb-6" action="">
+      <div className='grid grid-cols-1 gap-4 mx-auto'>
+        <h2 className='text-2xl font-bold text-center text-white mb-6'>Reach out to us!</h2>
+        <label htmlFor="name" className='block text-sm font-medium text-gray-300'>Name:
+          <input className='w-full py-2 px-4 text-gray-900 bg-gray-200 rounded focus:outline-none focus:ring-4 focus:ring-orange-600' name="name" value={formData.name}
           onChange={handleChange}
-          />
+        />
         </label>
-        <label htmlFor="">Email:
-          <input className='bg-gray-600' name="email" value={formData.email}
+        <label htmlFor="email" className='block text-sm font-medium text-gray-300'>Email:
+          <input className='w-full py-2 px-4 text-gray-900 bg-gray-200 rounded focus:outline-none focus:ring-4 focus:ring-orange-600' name="email" value={formData.email}
           onChange={handleChange}
-          />
+        />
         </label>
-        <label htmlFor="">Message:
-          <input className='bg-gray-600' name="message" value={formData.message}
+        <label htmlFor="message" className='block text-sm font-medium text-gray-300'>Message:
+          <input className='w-full py-2 px-4 text-gray-900 bg-gray-200 rounded focus:outline-none focus:ring-4 focus:ring-orange-600' name="message" value={formData.message}
           onChange={handleChange}
-          />
+        />
         </label>
-        <button onClick={handleFormSubmit}>Submit</button>
+        <button className="w-full bg-orange-600 rounded-md py-2 my-2" onClick={handleFormSubmit}>Submit</button>
       </div>
     </form>
   )
