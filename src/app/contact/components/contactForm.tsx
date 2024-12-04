@@ -11,12 +11,17 @@ interface FormData {
 
 const ContactForm: React.FC = () => {
 
+  // state to hold the current values of the form inputs
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
     message: '',
   });
 
+  // state to store the data submitted from the form for display or processing
+  const [submittedData, setSubmittedData] =useState<FormData | null> (null);
+
+  // handle form input changes
   const handleChange = (
     // event is specifically for input element
     event: React.ChangeEvent<HTMLInputElement>
@@ -28,7 +33,16 @@ const ContactForm: React.FC = () => {
     // console.log(name, value)
   }
 
-  // const handleFormSubmit = ()
+  // handle form submissions
+  const handleFormSubmit = (
+    // event is specifically for form event (form submission)
+    event: React.FormEvent
+  ) => {
+    // prevent full page reload
+    event.preventDefault();
+    // clear form fields
+    setFormData({ name: "", email: "", message: "" });
+  }
 
   return (
     <form className="py-10 place-content-center" action="">
@@ -48,6 +62,7 @@ const ContactForm: React.FC = () => {
           onChange={handleChange}
           />
         </label>
+        <button onClick={handleFormSubmit}>Submit</button>
       </div>
     </form>
   )
