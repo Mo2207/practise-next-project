@@ -42,7 +42,7 @@ const ContactForm: React.FC = () => {
     event.preventDefault();
     // save submitted form data for processing
     setSubmittedData(formData);
-    // console.log(formData);
+    console.log(submittedData);
 
     // clear form fields
     setFormData({ name: "", email: "", message: "" });
