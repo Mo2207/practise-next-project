@@ -8,8 +8,8 @@ import { useRouter } from 'next/navigation';
 const HeroSection = () => {
   const router = useRouter();
 
-  const handleContactClick = () => {
-    router.push('/contact');
+  const handleAppointmentClick = () => {
+    router.push('/appointment');
   }
 
   return (
@@ -19,7 +19,7 @@ const HeroSection = () => {
         <p className="text-lg mb-8">
           Bring your car back to life with our professional detailing services.
         </p>
-        <Button text="Contact Us" onClick={handleContactClick} />
+        <Button text="Book an appointment" onClick={handleAppointmentClick} />
       </div>
     </section>
   )

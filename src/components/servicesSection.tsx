@@ -1,13 +1,15 @@
 
 'use client'
 
+import Image from 'next/image';
+
 interface ServiceCardProps {
   title: string;
   description: string;
 }
 const ServiceCard = ({ title, description }: ServiceCardProps) => {
   return (
-    <div className="bg-white shadow-md rounded-lg p-6">
+    <div className="bg-white hover:bg-slate-200 hover:scale-110 transition ease-in duration-300 shadow-md rounded-lg p-6">
       <h3 className="text-2xl font-bold mb-2">{title}</h3>
       <p className="text-gray-600">{description}</p>
     </div>
@@ -16,9 +18,23 @@ const ServiceCard = ({ title, description }: ServiceCardProps) => {
 
 const ServicesSection = () => {
   return (
-    <section className='py-20'>
-    <div className='container mx-auto px-4'>
-      <h2 className="text-3xl font-bold mb-8 text-center">Our Services</h2>
+    <section className='py-20 relative min-h-[60vh] flex justify-center'>
+
+      {/* background image componenet */}
+      {/* absolute positioning over content div and set behind */}
+      <div className="absolute inset-0 z-0"> 
+        <Image
+          src="/images/black-exterior.webp" // Replace with your image path
+          alt="Detailing Garage"
+          layout="fill" // Makes the image fill the parent container
+          objectFit="cover" // Ensures the image covers the container
+          objectPosition="center" // Centers the image
+          priority // load image fast
+        />
+      </div>
+
+      {/* Content */}
+    <div className='relative container mx-auto py-20 px-4 bg-transparent flex justify-center'>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         <ServiceCard
           title="Exterior Detailing"
