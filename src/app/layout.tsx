@@ -25,10 +25,24 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        
+        {/* Menu */}
+        <header className="my-6">
+          <nav className="container mx-auto">
+            <ul className="flex space-x-16 font-bold">
+              <li>Home</li>
+              <li>Booking</li>
+              <li>Contact</li>
+            </ul>
+          </nav>
+        </header>
+
+        {/* Everything else */}
+        <main>
+          {children}
+        </main>
+
       </body>
     </html>
   );
