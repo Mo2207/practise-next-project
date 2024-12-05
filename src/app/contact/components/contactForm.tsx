@@ -51,23 +51,23 @@ const ContactForm: React.FC = () => {
   return (
     <form className="py-6 px-6 max-w-lg mx-auto bg-gray-800 rounded-lg shadow-md mb-6" action="">
       <div className='grid grid-cols-1 gap-4 mx-auto'>
+
         <h2 className='text-2xl font-bold text-center text-white mb-6'>Reach out to us!</h2>
-        <label htmlFor="name" className='block text-sm font-medium text-gray-300'>Name:
+
+        <label htmlFor="name" className='block font-bold text-gray-300'>Name:</label>
           <input className='w-full py-2 px-4 text-gray-900 bg-gray-200 rounded focus:outline-none focus:ring-4 focus:ring-orange-600' name="name" value={formData.name}
-          onChange={handleChange}
-        />
-        </label>
-        <label htmlFor="email" className='block text-sm font-medium text-gray-300'>Email:
+          onChange={handleChange}/>
+        
+        <label htmlFor="email" className='block font-bold text-gray-300'>Email:</label>
           <input className='w-full py-2 px-4 text-gray-900 bg-gray-200 rounded focus:outline-none focus:ring-4 focus:ring-orange-600' name="email" value={formData.email}
-          onChange={handleChange}
-        />
-        </label>
-        <label htmlFor="message" className='block text-sm font-medium text-gray-300'>Message:
+          onChange={handleChange}/>
+        
+        <label htmlFor="message" className='block font-bold text-gray-300'>Message:</label>
           <input className='w-full py-2 px-4 text-gray-900 bg-gray-200 rounded focus:outline-none focus:ring-4 focus:ring-orange-600' name="message" value={formData.message}
-          onChange={handleChange}
-        />
-        </label>
+          onChange={handleChange}/>
+        
         <button className="w-full bg-orange-600 rounded-md py-2 my-2" onClick={handleFormSubmit}>Submit</button>
+
       </div>
     </form>
   )

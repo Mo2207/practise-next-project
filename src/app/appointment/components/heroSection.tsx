@@ -6,13 +6,8 @@ import Image from 'next/image';
 const HeroSection = () => {
   return (
     <section className=''>
-      
-      <div>
-        
-      </div>
-
       {/* blue sports car image */}
-      <div className='relative w-full h-[60vh]'>
+      <div className='relative w-full min-h-screen'>
         <Image
           src="/images/blue-exterior.webp"
           alt="Blue sports car"

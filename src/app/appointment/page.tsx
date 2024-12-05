@@ -7,7 +7,7 @@ import BookingForm from '@/app/appointment/components/bookingForm';
 export default function Appointment() {
   return(
     <main>
-      <HeroSection/>
+      {/* <HeroSection/> */}
       <BookingForm/>
     </main>
   )
