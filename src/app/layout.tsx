@@ -28,11 +28,14 @@ export default function RootLayout({
 const router = useRouter();
 
 const handleNavClick = (
+  // event is a React MouseEvent (click) triggered by an HTMLElement (li)
   event: React.MouseEvent<HTMLElement>) => 
   {
+  // page is the currentTarget that was clicked (li) and tells typescript to type it as a HTMLElement
+  // then HTMLElement allows acces to dataset properties (dataset.page)
   const page = (event.currentTarget as HTMLElement).dataset.page;
-  console.log(`Clicked ${page}`)
-  
+  // console.log(`Clicked ${page}`);
+  // navigate to proper page using router
   router.push(`/${page}`);
 }
 
