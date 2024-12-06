@@ -22,14 +22,13 @@ const ServicesSection = () => {
 
       {/* background image componenet */}
       {/* absolute positioning over content div and set behind */}
-      <div className="absolute inset-0 z-0"> 
+      <div className="absolute inset-0 z-0 h-screen"> 
         <Image
           src="/images/black-exterior.webp" // Replace with your image path
           alt="Detailing Garage"
-          layout="fill" // Makes the image fill the parent container
-          objectFit="cover" // Ensures the image covers the container
-          objectPosition="center" // Centers the image
-          priority // load image fast
+          fill // Makes the image fill the parent container
+          className='object-cover' // Ensures the image covers the container
+          priority
         />
       </div>
 

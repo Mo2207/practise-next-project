@@ -44,7 +44,7 @@ const handleNavClick = (
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         
         {/* Menu */}
-        <nav className="sticky min-h-[7vh] w-screen bg-orange-600 flex items-center top-0 left-0">
+        <nav className="sticky min-h-[7vh] w-screen bg-orange-600 flex items-center top-0 left-0 z-50">
           <ul className="flex space-x-16 font-medium text-white text-2xl px-32">
             <li data-page="/" onClick={handleNavClick} className="cursor-pointer">Home</li>
             <li data-page="booking" onClick={handleNavClick} className="cursor-pointer">Booking</li>

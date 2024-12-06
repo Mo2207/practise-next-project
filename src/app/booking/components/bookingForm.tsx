@@ -53,18 +53,17 @@ const BookingForm: React.FC = () => {
   return (
     <div className='flex justify-center relative'>
 
-      <div className='absolute inset-0 z-0 w-screen h-screen'>
+      <div className='absolute inset-0 z-0 w-full h-[calc(100vh-7vh)]'>
       <Image
           src="/images/3-sports-cars.webp" // Replace with your image path
           alt="3 sports cars"
-          layout="fill" // Makes the image fill the parent container
-          objectFit="cover" // Ensures the image covers the container
-          objectPosition="center" // Centers the image
-          priority // load image fast
+          className="object-cover" // Ensures the image covers the container
+          fill
+          priority
         />
       </div>
 
-      <form className="my-10 py-3 pb-10 bg-gray-800 rounded w-[60vw] relative bg-opacity-90" action="">
+      <form className="my-10 py-3 pb-10 bg-gray-800 rounded w-[60vw] relative bg-opacity-90 z-10 mt-[15vh]" action="">
         <div className='grid grid-cols-1 gap-4 w-[30vw] mx-auto'>
 
           <h2 className='text-2xl font-bold text-center text-white mb-6'>Book your Detailing today!</h2>
