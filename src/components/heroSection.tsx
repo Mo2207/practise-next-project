@@ -9,7 +9,7 @@ const HeroSection = () => {
   const router = useRouter();
 
   const handleAppointmentClick = () => {
-    router.push('/appointment');
+    router.push('/booking');
   }
 
   return (
