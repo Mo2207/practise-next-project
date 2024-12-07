@@ -54,7 +54,7 @@ const BookingForm: React.FC = () => {
   return (
     <div className='flex justify-center relative'>
 
-      <div className='absolute inset-0 z-0 w-full h-full'>
+      <div className='absolute inset-0 z-0 w-full h-[100vh]'>
       <Image
           src="/images/3-sports-cars.webp"
           alt="3 sports cars"
@@ -64,18 +64,18 @@ const BookingForm: React.FC = () => {
         />
       </div>
 
-      <form className="my-10 py-3 pb-10 bg-gray-800 rounded w-[60vw] relative bg-opacity-90 z-10 mt-[8vh]" action="">
+      <form className="my-10 py-3 pb-10 bg-gray-800 border rounded w-[60vw] relative bg-opacity-90 z-10 mt-[8vh]" action="">
         <div className='grid grid-cols-1 gap-4 w-[30vw] mx-auto'>
 
           <h2 className='text-2xl font-bold text-center text-white mb-6'>Book your Detailing today!</h2>
 
-          <label htmlFor='name' className='block font-bold text-white'>Name:</label>
+          <label htmlFor='name' className='block font-bold text-white'>Name</label>
             <input
             className='w-full py-2 px-4 text-gray-900 bg-gray-200 rounded focus:outline-none focus:ring-4 focus:ring-orange-600'
             onChange={handleChange}
             />
           
-          <label htmlFor='email' className='block font-bold text-white'>Email:</label>
+          <label htmlFor='email' className='block font-bold text-white'>Email</label>
             <input
             className='w-full py-2 px-4 text-gray-900 bg-gray-200 rounded focus:outline-none focus:ring-4 focus:ring-orange-600'
             onChange={handleChange}
@@ -87,7 +87,7 @@ const BookingForm: React.FC = () => {
             onChange={handleChange}
             />
           
-          <label htmlFor='timeRequest' className='block font-bold text-white space'>Date:</label>
+          <label htmlFor='timeRequest' className='block font-bold text-white space'>Date</label>
             <input
             className='w-full py-2 px-4 text-gray-900 bg-gray-200 rounded focus:outline-none focus:ring-4 focus:ring-orange-600'
             onChange={handleChange}

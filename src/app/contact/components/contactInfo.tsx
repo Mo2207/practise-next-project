@@ -5,8 +5,8 @@ import { MapPinIcon, PhoneIcon, EnvelopeIcon } from '@heroicons/react/24/solid';
 
 const ContactInfo = () => {
   return (
-    <section className="py-10 bg-gray-200">
-      <div className="text-gray-800 mx-auto space-y-4 text-center content-center">
+    <section className="py-10 bg-gray-800 bg-opacity-90 border max-w-2xl mx-auto rounded-lg mt-6">
+      <div className="text-white mx-auto space-y-4 text-center content-center">
         <h2 className="texl-5xl font-bold mb-6 text-center">Our Contact Details</h2>
         <p className="flex items-center justify-center space-x-3">
           <MapPinIcon className="h-6 w-6 text-orange-600" />

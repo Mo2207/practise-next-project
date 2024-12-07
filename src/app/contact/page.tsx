@@ -11,7 +11,7 @@ export default function Contact() {
         <HeroSection/>
         <ContactInfo/>
         <section className='relative'>
-          <div className='absolute inset-0 z-0 w-full h-full'>
+          <div className='fixed inset-0 -z-10'>
             <Image
               src="/images/blue-exterior.webp"
               alt="blue sports car"
@@ -21,7 +21,7 @@ export default function Contact() {
             />
           </div>
 
-          <div className='relative z-10 py-3'>
+          <div className='relative py-3'>
             <FaqsSection/>
             <ContactForm/>
           </div>
