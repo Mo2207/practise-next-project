@@ -33,6 +33,7 @@ const BookingForm: React.FC = () => {
     const {name, value} = event.target
     // copy existing form data & set the new form data
     setFormData({...formData, [name]: value})
+    // console.log(name, value)
   }
 
     // handle form submissions
@@ -70,19 +71,27 @@ const BookingForm: React.FC = () => {
 
           <label htmlFor='name' className='block font-bold text-white'>Name:</label>
             <input
-            className='w-full py-2 px-4 text-gray-900 bg-gray-200 rounded focus:outline-none focus:ring-4 focus:ring-orange-600'/>
+            className='w-full py-2 px-4 text-gray-900 bg-gray-200 rounded focus:outline-none focus:ring-4 focus:ring-orange-600'
+            onChange={handleChange}
+            />
           
           <label htmlFor='email' className='block font-bold text-white'>Email:</label>
             <input
-            className='w-full py-2 px-4 text-gray-900 bg-gray-200 rounded focus:outline-none focus:ring-4 focus:ring-orange-600'/>
+            className='w-full py-2 px-4 text-gray-900 bg-gray-200 rounded focus:outline-none focus:ring-4 focus:ring-orange-600'
+            onChange={handleChange}
+            />
           
           <label htmlFor='service' className='block font-bold text-white'>Service</label>
             <input
-            className='w-full py-2 px-4 text-gray-900 bg-gray-200 rounded focus:outline-none focus:ring-4 focus:ring-orange-600'/>
+            className='w-full py-2 px-4 text-gray-900 bg-gray-200 rounded focus:outline-none focus:ring-4 focus:ring-orange-600'
+            onChange={handleChange}
+            />
           
           <label htmlFor='timeRequest' className='block font-bold text-white space'>Date:</label>
             <input
-            className='w-full py-2 px-4 text-gray-900 bg-gray-200 rounded focus:outline-none focus:ring-4 focus:ring-orange-600'/>
+            className='w-full py-2 px-4 text-gray-900 bg-gray-200 rounded focus:outline-none focus:ring-4 focus:ring-orange-600'
+            onChange={handleChange}
+            />
           
           <button className="w-full bg-orange-600 rounded-md py-2 my-6" onClick={handleFormSubmit}>Submit
           </button>
