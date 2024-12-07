@@ -49,7 +49,7 @@ const ContactForm: React.FC = () => {
   }
 
   return (
-    <form className="py-6 px-6 max-w-lg mx-auto bg-gray-800 rounded-lg shadow-md mb-6" action="">
+    <form className="py-6 px-6 max-w-lg mx-auto bg-gray-800 bg-opacity-90 rounded-lg shadow-md mb-6" action="">
       <div className='grid grid-cols-1 gap-4 mx-auto'>
 
         <h2 className='text-2xl font-bold text-center text-white mb-6'>Reach out to us!</h2>
