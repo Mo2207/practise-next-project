@@ -5,6 +5,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { useRouter } from "next/navigation";
 import metadata from "@/utils/metadata";
+import { Rubik } from 'next/font/google'
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -17,7 +18,10 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
-
+const rubik = Rubik({
+  subsets: ['latin'], // Use 'latin' subset for most languages
+  variable: '--font-rubik', // Optional: Use a CSS variable for font-family
+});
 
 
 export default function RootLayout({
@@ -40,12 +44,12 @@ const handleNavClick = (
 }
 
   return (
-    <html lang="en">
+    <html lang="en" className={rubik.variable}>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         
         {/* Menu */}
         <nav className="sticky min-h-[7vh] w-screen bg-orange-600 flex items-center top-0 left-0 z-50">
-          <ul className="flex space-x-16 font-medium text-white text-2xl px-32">
+          <ul className="flex space-x-16 font-medium text-white text-xl px-32">
             <li data-page="/" onClick={handleNavClick} className="cursor-pointer">Home</li>
             <li data-page="booking" onClick={handleNavClick} className="cursor-pointer">Booking</li>
             <li data-page="contact" onClick={handleNavClick} className="cursor-pointer">Contact</li>

@@ -53,7 +53,7 @@ const BookingForm: React.FC = () => {
   return (
     <div className='flex justify-center relative'>
 
-      <div className='absolute inset-0 z-0 w-full h-[calc(100vh-7vh)]'>
+      <div className='absolute inset-0 z-0 w-full h-[100vh]'>
       <Image
           src="/images/3-sports-cars.webp" // Replace with your image path
           alt="3 sports cars"
